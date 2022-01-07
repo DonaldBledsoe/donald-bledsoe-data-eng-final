@@ -1,0 +1,3 @@
+# imports to go into requirements.txt
+apache-beam
+apache-beam[gcp]
