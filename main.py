@@ -49,7 +49,7 @@ if __name__ == '__main__':
         tableId='cust_tier_code-sku-total_sales_amount'
     )
 
-    with beam.Pipeline(options=pipeline_options) as pipeline:           # Join of customers and product views tables
+    with beam.Pipeline(options=pipeline_options) as pipeline:           # Join of customers and product views, and customers and orders tables
         data3 = (
                 pipeline | 'Query tables' >> beam.io.ReadFromBigQuery(
                     query='SELECT table2.cust_tier_code, CAST(table1.sku as int) as sku, COUNT(table1.sku) as total_no_of_product_views FROM `york-cdf-start.final_input_data.product_views` as table1 '
