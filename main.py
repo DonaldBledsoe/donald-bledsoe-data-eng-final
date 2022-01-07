@@ -63,7 +63,7 @@ if __name__ == '__main__':
                         'ON table1.customer_id = table2.customer_id GROUP BY table2.cust_tier_code, table1.SKU ORDER BY table1.sku, table2.CUST_TIER_CODE asc', project="york-cdf-start", use_standard_sql=True)
             )
 
-        # Outputting the tables to BigQuery.
+        # Outputting the two tables to BigQuery.
         data3 | "Write1" >> beam.io.WriteToBigQuery(
             views_spec,
             schema=views_schema,
