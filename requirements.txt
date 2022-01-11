@@ -1,4 +1,4 @@
-# imports to go into requirements.txt
+# imports to go into requirements.txt. pyparsing was needed due to deprecation of previous
 apache-beam
 apache-beam[gcp]
 pyparsing==2.4.7
