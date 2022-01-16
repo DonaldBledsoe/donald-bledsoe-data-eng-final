@@ -72,7 +72,7 @@ if __name__ == '__main__':
             views_spec,
             schema=views_schema,
             create_disposition=beam.io.BigQueryDisposition.CREATE_IF_NEEDED,
-            write_disposition=beam.io.BigQueryDisposition.WRITE_APPEND,
+            write_disposition=beam.io.BigQueryDisposition.WRITE_TRUNCATE,
 
         )
 
@@ -80,6 +80,6 @@ if __name__ == '__main__':
             sales_spec,
             schema=sales_schema,
             create_disposition=beam.io.BigQueryDisposition.CREATE_IF_NEEDED,
-            write_disposition=beam.io.BigQueryDisposition.WRITE_APPEND,
+            write_disposition=beam.io.BigQueryDisposition.WRITE_TRUNCATE,
 
         )
